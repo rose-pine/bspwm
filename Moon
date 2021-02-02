@@ -1,0 +1,3 @@
+# Moon
+bspc config normal_border_color "#817c9c"
+bspc config focused_border_color "#9ccfd8"
