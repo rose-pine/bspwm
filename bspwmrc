@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# My monitor setup :)
+lc=$(cat $HOME/.config/sxhkd/monitor.txt | tail -n 1)
+if [ $lc = "1" ]
+then
+    xrandr --output HDMI1 --primary --mode 1920x1080 --rotate normal --output eDP1 --off
+    bspc monitor HDMI1 -d I II III IV V
+    bspc monitor eDP1 -r
+elif [ $lc = "2" ]
+then
+    xrandr --output HDMI1 --primary --mode 1920x1080 --rotate normal --output eDP1 --mode 1366x768 --rotate normal --right-of HDMI1
+    bspc monitor HDMI1 -d I II III 
+    bspc monitor eDP1 -d IV V  
+else
+    xrandr --output eDP1 --mode 1366x768 --output HDMI1 --off
+    bspc monitor eDP1 -d I II III IV V
+    bspc monitor HDMI1 -r
+fi
+
+  
+
+# Bspwm config, basic things y'know 
+bspc config border_radius           15  
+bspc config normal_border_color "#817c9c"
+bspc config focused_border_color "#9ccfd8"
+bspc config border_width		    3
+bspc config window_gap 			    8
+bspc config focus_follows_pointer	true
+bspc config top_padding             50
+bspc config split_ratio			    0.52
+bspc config borderless_monocle		true
+bspc config gapless_monocle		    false 
+bspc config single_monocle		    true
+
+
+
+
+
+# Start some cool programs!
+$HOME/.config/polybar/launch.sh &
+picom &
+nitrogen --restore &
+sxhkd &
+bspwm
+
