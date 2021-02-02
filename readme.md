@@ -19,7 +19,9 @@
 
 ## Gallery
 
-![Rosé Pine with App](assets/template.png)
+![Rosé Pine](https://cdn.discordapp.com/attachments/743573851685912629/806305171726008360/unknown.png)
+![Moon](https://cdn.discordapp.com/attachments/743573851685912629/806300479453528134/unknown.png)
+![Dawn](https://cdn.discordapp.com/attachments/743573851685912629/806306072285544478/unknown.png)
 
 ## Thanks to
 
